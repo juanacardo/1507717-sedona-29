@@ -2,7 +2,7 @@
 
 :root {
 	--basic-black: #000000;
-	--basic-white: #ffffff;
+	--basic-white: #FFFFFF;
 	--opacity-white: rgba(255, 255, 255, 0.3);
 	--footer-background-white: rgba(255, 255, 255, 0.9);
 
@@ -48,15 +48,19 @@ a {
 
 img {
  	max-width: 100%;
-  	height: auto;
+  height: auto;
 }
 
 .visually-hidden {
 	position: absolute;
-  	clip: rect(0 0 0 0);
-  	width: 1px;
-  	height: 1px;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
  	margin: -1px;
+}
+
+.clear-list {
+  list-style: none;
 }
 
 /* Main header */
@@ -67,14 +71,10 @@ img {
 
 /* Navigation*/
 
-.site-navigation {
-	list-style: none;
-}
-
 .site-navigation a {
 	color: var(--basic-black);
 	line-height: 26px;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .site-navigation a:hover {
@@ -105,7 +105,7 @@ img {
 /* Opening */
 
 .features-opening {
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
 	text-align: center;
@@ -115,10 +115,6 @@ img {
 
 .features {
 	text-align: center;
-}
-
-.features-list {
-	list-style: none;
 }
 
 .features-item,
@@ -137,18 +133,14 @@ img {
 
 .features-item h3,
 .features-special-item h3 {
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 21px;
 }
 
 /* Recomendation */
 
-.recomendation {
-	list-style: none;
-}
-
 .recomendation h3 {
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 21px;
 }
 
@@ -160,7 +152,7 @@ img {
 
 .button {
 	font: inherit;
-	font-weight: bold;
+	font-weight: 700;
 	text-align: center;
 	color: var(--basic-white);
 	text-transform: uppercase;
@@ -175,7 +167,7 @@ img {
 }
 
 .hotel-search-opening {
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 30px;
 	line-height: 24px;
 }
@@ -244,10 +236,6 @@ img {
 }
 
 /* Socials */
-
-.social-list {
-	list-style: none;
-}
 
 .social-button {
 	background-color: var(--basic-blue);
