@@ -31,16 +31,27 @@
 	--active-copyright-logo: #231F20;
 }
 
+/* Global */
+
+.page {
+	height: 100%;
+	background-color: var(--background-gray);
+}
+
 .page-body {
-	min-width: 960px;
-	margin: 0;
+	max-width: 1200px;
+	min-height: 100%;
+	margin: 0 auto;
 	padding: 0;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-black);
 	text-transform: uppercase;
-	background-color: var(--background-gray);
+
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
 }
 
 a {
@@ -49,28 +60,41 @@ a {
 
 img {
  	max-width: 100%;
-  height: auto;
+  	height: auto;
 }
 
 .visually-hidden {
 	position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
  	margin: -1px;
 }
 
 .clear-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Main header */
 
 .main-header {
-	background-color: var(--basic-white);
+	background: transparent;
+	height: 70px;
+}
+/* Logo */
+
+.main-logo {
+	justify-self: center;
 }
 
 /* Navigation*/
+
+.main-navigation {
+	background-color: var(--basic-white);
+	height: 56px;
+}
 
 .site-navigation a {
 	color: var(--basic-black);
@@ -100,6 +124,7 @@ img {
 
 .first-screen {
 	background-color: var(--light-blue);
+	text-align: center;
 }
 
 /* Opening */
@@ -137,6 +162,40 @@ img {
 	font-size: 21px;
 }
 
+.features-picture-right {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 256px;
+}
+
+.features-picture-right .feature-item-card {
+	grid-column: 1 / 2;
+}
+
+.features-picture-right img {
+	grid-column: 2 / span 2;
+}
+
+.features-picture-left {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 256px;
+}
+
+.features-picture-left .feature-item-card {
+	grid-column: 3 / 4;
+}
+
+.features-picture-left img {
+	grid-column: 1 / span 2;
+}
+
+.feature-item-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 256px;
+}
+
 /* Recomendation */
 
 .recomendation h3 {
@@ -146,6 +205,12 @@ img {
 
 .recomendation-item {
 	background-color: var(--basic-white);
+}
+
+.recomendation {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 330px;
 }
 
 /* Button */

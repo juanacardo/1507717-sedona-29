@@ -7,24 +7,25 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
+  
   <body class="page-body">
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-logo">
-          <img src="img/main-logo.svg" width="138" height="70" alt="Логотип сайта города Седона">
-        </a>
-        <ul class="site-navigation clear-list">
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
+          <a class="main-logo">
+            <img src="img/main-logo.svg" width="138" height="70" alt="Логотип сайта города Седона">
+          </a>
+          <ul class="site-navigation clear-list">
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
+            <li><a href="blank.html">Карта штата</a></li>
+            <li><a href="hotels.html">Гостиницы</a></li>
+          </ul>
       </nav>
     </header>
 
     <main class="wrapper">
-      <h1 class="visually-hidden">Город Седона</h1>
+     <h1 class="visually-hidden">Город Седона</h1>
 
       <section class="first-screen">
       	<h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
@@ -37,10 +38,12 @@
 
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ul class="features-list clear-list">
-          <li class="features-special-item">
-            <h3>Настоящий городок</h3>
-            <span>— №1 —</span>
-            <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+          <li class="features-special-item features-picture-right">
+            <div class="feature-item-card">
+              <h3>Настоящий городок</h3>
+              <span>— №1 —</span>
+              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
             <img src="img/features1.jpg" width="800" height="256" alt="Седона - не аттракцион для туристов, там течёт своя жизнь">
           </li>
           <li class="features-item">
@@ -59,27 +62,31 @@
 	          </li>
         	</ul>
           </li>
-          <li class="features-special-item">
+          <li class="features-special-item features-picture-left">
           	<img src="img/features2.jpg" width="800" height="256" alt="Там есть Мост дьявола">
-            <h3>Там есть Мост дьявола</h3>
-            <span>— №2 —</span>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <div class="feature-item-card">
+              <h3>Там есть Мост дьявола</h3>
+              <span>— №2 —</span>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
           </li>
-          <li class="features-item">
-            <h3>Небольшая площадь</h3>
-            <span>— №3 —</span>
-            <p>Все достопримечательности находятся очень близко</p>
-          </li>
-          <li class="features-item">
-            <h3>Красивая дорога</h3>
-            <span>— №4 —</span>
-            <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
-          </li>
-          <li class="features-item">
-            <h3>Мало туристов</h3>
-            <span>— №5 —</span>
-            <p>Большинство едет в гранд каньон и толпится там</p>
-          </li>
+          <div class="feature-item-wrapper">
+            <li class="features-item">
+              <h3>Небольшая площадь</h3>
+              <span>— №3 —</span>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="features-item">
+              <h3>Красивая дорога</h3>
+              <span>— №4 —</span>
+              <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+            </li>
+            <li class="features-item">
+              <h3>Мало туристов</h3>
+              <span>— №5 —</span>
+              <p>Большинство едет в гранд каньон и толпится там</p>
+            </li>
+          </div>
         </ul>
       </section>
 
@@ -148,5 +155,6 @@
       </section>
     </footer>
 
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>
