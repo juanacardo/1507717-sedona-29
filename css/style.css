@@ -86,12 +86,50 @@ img {
 
 .main-logo {
 	justify-self: center;
+  order: 3;
 }
 
 /* Navigation*/
 
 .main-navigation {
 	background-color: var(--basic-white);
+}
+
+.main-navigation-wrapper {
+  max-width: 1054px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.align-left {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-4 {
+  order: 4;
+}
+
+.order-5 {
+  order: 5;
+}
+
+.site-navigation {
+  display:contents;
 }
 
 .site-navigation a {
