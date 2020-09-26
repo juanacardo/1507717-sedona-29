@@ -59,8 +59,8 @@ a {
 }
 
 img {
- 	max-width: 100%;
-  	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -81,7 +81,6 @@ img {
 
 .main-header {
 	background: transparent;
-	height: 70px;
 }
 /* Logo */
 
@@ -93,7 +92,6 @@ img {
 
 .main-navigation {
 	background-color: var(--basic-white);
-	height: 56px;
 }
 
 .site-navigation a {
@@ -142,11 +140,6 @@ img {
 	text-align: center;
 }
 
-.features-item,
-.features-special-item {
-	text-align: center;
-}
-
 .features-item {
 	background-color: var(--gray);
 }
@@ -162,7 +155,9 @@ img {
 	font-size: 21px;
 }
 
-.features-picture-right {
+.features-picture-right,
+.features-picture-left,
+.feature-item-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 256px;
@@ -176,24 +171,12 @@ img {
 	grid-column: 2 / span 2;
 }
 
-.features-picture-left {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 256px;
-}
-
 .features-picture-left .feature-item-card {
 	grid-column: 3 / 4;
 }
 
 .features-picture-left img {
 	grid-column: 1 / span 2;
-}
-
-.feature-item-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 256px;
 }
 
 /* Recomendation */
@@ -275,6 +258,14 @@ img {
 
 .main-footer {
 	background-color: var(--footer-background-white);
+}
+
+.main-footer-wrapper {
+  max-width: 1054px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 37px;
 }
 
 .footer-contacts {
