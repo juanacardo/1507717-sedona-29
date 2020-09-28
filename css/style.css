@@ -76,6 +76,7 @@ img {
 .wrapper {
   background-color: var(--basic-white);
   max-width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
 }
 
@@ -98,11 +99,7 @@ img {
 
 .main-navigation {
 	background-color: var(--basic-white);
-}
-
-.main-navigation-wrapper {
-  padding: 0 73px;
-  height: 56px;
+  /*padding: 0 73px;*/
 }
 
 .align-left {
@@ -111,6 +108,24 @@ img {
 
 .align-right {
   text-align: right;
+}
+
+.site-navigation {
+  display: flex;
+}
+
+.site-navigation li {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 15px 0;
+}
+
+.site-navigation li:first-child {
+  padding-left: 73px;
+}
+
+.site-navigation li:last-child {
+  padding-right: 73px;
 }
 
 .site-navigation a {
