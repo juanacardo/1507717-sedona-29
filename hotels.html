@@ -16,14 +16,10 @@
             <img src="img/main-logo.svg" width="138" height="70" alt="Логотип сайта города Седона">
           </a>
           <ul class="site-navigation clear-list">
-            <div class="site-navigation-wrapper">
-              <li class="align-left"><a href="blank.html">Информация</a></li>
-              <li class="align-left"><a href="blank.html">Фото и видео</a></li>
-            </div>
-            <div class="site-navigation-wrapper">
-              <li class="align-right"><a href="blank.html">Карта штата</a></li>
-              <li class="align-right"><a>Гостиницы</a></li>
-            </div>
+            <li class="align-left"><a href="blank.html">Информация</a></li>
+            <li class="align-left"><a href="blank.html">Фото и видео</a></li>
+            <li class="align-right"><a href="blank.html">Карта штата</a></li>
+            <li class="align-right"><a>Гостиницы</a></li>
           </ul>
         </nav>
       </header>
@@ -44,6 +40,8 @@
             <a>По цене</a>
             <a href="blank.html">По типу</a>
             <a href="blank.html">По рейтингу</a>
+          </p>
+          <p class="arrows">
             <a href="blank.html">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
@@ -57,20 +55,20 @@
           </p>
         </section>
 
-        <section class="hotel-search-list">
+        <section>
           <h2 class="visually-hidden">Список гостиниц</h2>
           <ul class="hotel-search-list clear-list">
-            <li>
-              <a href="blank.html">
+            <li class="hotel-search-item">
+              <a class="hotel-image" href="blank.html">
                 <img src="img/amara.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
               </a>
               <div class="hotel-card">
                 <a class="hotel-card-header" href="blank.html"><h3 class="hotel-card-name">Amara Resort & Spa</h3></a>
-                <p>
+                <p class="hotel-type-price">
                   <span>Гостиница</span>
                   <span>от 4000 р.</span>
                 </p>
-                <p>
+                <p class="buttons-wrapper">
                   <a class="button button-more" href="blank.html">Подробнее</a>
                   <a class="button button-booking" href="blank.html">Забронировать</a>
                 </p>
@@ -81,17 +79,17 @@
               </div>
             </li>
 
-            <li>
-              <a href="blank.html">
+            <li class="hotel-search-item">
+              <a class="hotel-image" href="blank.html">
                 <img src="img/desert.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
               </a>
               <div class="hotel-card">
                 <a class="hotel-card-header" href="blank.html"><h3 class="hotel-card-name">Desert Quail Inn</h3></a>
-                <p>
+                <p class="hotel-type-price">
                   <span>Мотель</span>
                   <span>от 3000 р.</span>
                 </p>
-                <p>
+                <p class="buttons-wrapper">
                   <a class="button button-more" href="blank.html">Подробнее</a>
                   <a class="button button-booking" href="blank.html">Забронировать</a>
                 </p>
@@ -102,17 +100,17 @@
               </div>
             </li>
 
-            <li>
-              <a href="blank.html">
+            <li class="hotel-search-item">
+              <a class="hotel-image" href="blank.html">
                 <img src="img/villas.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
               </a>
               <div class="hotel-card">
                 <a class="hotel-card-header" href="blank.html"><h3 class="hotel-card-name">Villas at Poco Diablo</h3></a>
-                <p>
+                <p class="hotel-type-price">
                   <span>Апартаменты</span>
                   <span>от 2000 р.</span>
                 </p>
-                <p>
+                <p class="buttons-wrapper">
                   <a class="button button-more" href="blank.html">Подробнее</a>
                   <a class="button button-booking" href="blank.html">Забронировать</a>
                 </p>
@@ -131,16 +129,14 @@
 
           <section class="footer-contacts">
             <h2 class="visually-hidden">Контакты</h2>
-            <p>
-              <a href="blank.html">#visitsedona</a>
-              <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
-            </p>
+            <a href="blank.html">#visitsedona</a>
+            <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
           </section>
 
-          <section class="footer-social">
+          <section>
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="social-list clear-list">
-              <li>
+              <li class="social-item">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Twitter</span>
                   <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -149,7 +145,7 @@
                 </a>
               </li>
 
-              <li>
+              <li class="social-item">
                 <a class="social-button" href="#">
                   <span class="visually-hidden">Facebook</span>
                   <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,12 +154,13 @@
                 </a>
               </li>
 
-              <li>
+              <li class="social-item">
                 <a class="social-button" href="#">
-                  <span class="visually-hidden">YouTube</span></a>
+                  <span class="visually-hidden">YouTube</span>
                   <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
                   </svg>
+                </a>
               </li>
             </ul>
           </section>

@@ -435,28 +435,43 @@ img {
 
  /* Hotels page */
 
- .hotels-wrapper {
+.hotels-wrapper {
   display: grid;
   grid-template-rows: min-content 86px min-content;
-  padding: 0 72px;
  }
 
  /* Hotel search result */
 
- .result {
+.hotel-search-result {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray);
+  padding: 0 72px;
+ }
+
+.result {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
- }
+  margin: 0;
+  margin-right: 48px;
+}
 
 .sort {
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
+  padding-bottom: 7px;
 }
 
 .sort a {
   color: var(--opacity-black);
   border-bottom: 1px dashed var(--basic-blue);
+  margin-left: 29px;
+}
+
+.sort a:nth-of-type(1) {
+  margin-left: 37px;
 }
 
 .sort a:hover {
@@ -473,12 +488,30 @@ img {
   border: none;
 }
 
+.arrows {
+  width: 30px;
+  margin: 0;
+  margin-left: auto;
+  display:flex;
+  justify-content: space-between;
+}
+
 /* Hotel search list */
 
-.hotel-card-name {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
+.hotel-search-item {
+  padding: 24px 72px 30px;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.hotel-image {
+  margin-right: 30px;
+  margin-top: 6px;
+}
+
+.hotel-image img {
+  display: block;
 }
 
 .hotel-card-header {
@@ -493,8 +526,32 @@ img {
   color: var(--opacity-black);
 }
 
+.hotel-card-name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  margin: 0 0 6px;
+}
+
+.hotel-type-price {
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.hotel-type-price span:first-child {
+  display: inline-block;
+  min-width: 110px;
+  margin-right: 3px;
+}
+
+.buttons-wrapper {
+  margin: 0;
+}
+
 .button-more {
   background-color: var(--basic-blue);
+  padding: 4px 16px;
+  margin-right: 3px;
 }
 
 .button-more:hover {
@@ -508,6 +565,7 @@ img {
 
 .button-booking {
   background-color: var(--basic-brown);
+  padding: 4px 16px;
 }
 
 .button-booking:hover {
@@ -519,7 +577,16 @@ img {
   background-color: var(--active-brown);
 }
 
+.hotel-rating {
+  margin-left: auto;
+}
+
 .rating {
   color: var(--dark-gray);
   background-color: var(--background-gray);
+  line-height: 27px;
+  text-align: center;
+  width: 110px;
+  height: 27px;
+  margin: 0;
 }
