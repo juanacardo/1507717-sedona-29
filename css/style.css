@@ -3,6 +3,7 @@
 :root {
   --basic-black: #000000;
   --opacity-black: rgba(0, 0, 0, 0.3);
+  --shadow: rgba(0, 1, 1, 0.2);
 
   --basic-white: #FFFFFF;
   --opacity-white: rgba(255, 255, 255, 0.3);
@@ -28,8 +29,7 @@
   --arrow-gray: #CACACA;
   --field-hover-gray: #EBEBEB;
   --icon-gray: #A9A9A9;
-
-  --active-copyright-logo: #231F20;
+  --academy-logo-gray: #BDBBBC;
 }
 
 /* Global */
@@ -79,6 +79,12 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+  box-shadow: 0px 5px 15px var(--shadow);
+}
+
+.page-content {
+  margin-bottom: -120px;
 }
 
 /* Main header */
@@ -93,7 +99,7 @@ img {
   z-index: 1;
   top: 0;
   left: 50%;
-  margin-left: -69px;
+  transform: translate(-50%);
 }
 
 /* Navigation*/
@@ -111,7 +117,7 @@ img {
 
 .site-navigation li {
   width: 25%;
-  padding: 15px 0;
+  padding: 14px 0 16px;
   box-sizing: border-box;
 }
 
@@ -153,19 +159,31 @@ img {
 
 .first-screen {
   background-color: var(--light-blue);
+  background-image: url("../img/background-first-screen.jpg");
   height: 509px;
   display: flex;
+  position: relative;
+}
+
+.first-screen::after {
+  content: "";
+  width: 100%;
+  height: 56px;
+  background-image: url("../img/shape.svg");
+  position: absolute;
+  bottom: 0;
 }
 
 .first-screen img {
-  margin: auto;
+  height: 350px;
+  margin: 77px auto;
 }
 
 /* Opening */
 
 .features-opening {
   padding-top: 41px;
-  padding-bottom: 53px;
+  padding-bottom: 54px;
 }
 
 .features-opening-header {
@@ -173,7 +191,7 @@ img {
   font-size: 21px;
   line-height: 27px;
   max-width: 519px;
-  margin: 0 auto 46px;
+  margin: 0 auto 45px;
 }
 
 .features-opening-text {
@@ -241,7 +259,7 @@ img {
 
 .feature-item-card p,
 .features-item p {
-  margin-top: 21px;
+  margin-top: 22px;
 }
 
 /* Recomendation */
@@ -255,6 +273,7 @@ img {
 .recomendation-item {
   background-color: var(--basic-white);
   padding: 158px 52px 81px;
+  position: relative;
 }
 
 .recomendation-item h3 {
@@ -266,6 +285,39 @@ img {
 
 .recomendation-item p {
   margin: 0;
+}
+
+.booking::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-house.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60px;
+  left: 163px;
+}
+
+.food::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-burger.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 60px;
+  left: 163px;
+}
+
+.gifts::before {
+  content: "";
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/icon-gift.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 56px;
+  left: 168px;
 }
 
 /* Button */
@@ -320,9 +372,48 @@ img {
 }
 
 /* Modal of main page */
+
 .modal {
   text-align: center;
+  font-weight: 700;
   background-color: var(--basic-white);
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0px 7px 15px var(--shadow);
+  box-sizing: border-box;
+  padding: 55px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-element-max {
+  width: 458px;
+  margin: 0 auto 30px;
+}
+
+.modal-element-adults {
+  width: 226px;
+  margin: 0;
+}
+
+.modal-element-children {
+  width: 179px;
+  margin: 0;
+}
+
+.modal-input {
+  font: inherit;
+  border: none;
+}
+
+.modal-input::placeholder {
+  font: inherit;
+  text-transform: uppercase;
+  color: inherit;
 }
 
 .modal-button {
@@ -340,11 +431,15 @@ img {
 
 /* Map */
 
+.map {
+  position: relative;
+  overflow: hidden;
+}
+
 .map img {
   width: 1200px;
   height: 594px;
   display: block;
-  margin-bottom: -120px;
 }
 
 /* Main footer */
@@ -373,18 +468,6 @@ img {
   color: var(--basic-black);
   display: block;
   margin-bottom: 15px;
-}
-
-.footer-contacts a:hover {
-  color: var(--basic-blue);
-}
-
-.footer-contacts a:focus {
-  color: var(--opacity-black);
-}
-
-.footer-contacts a:not([href]) {
-  color: var(--basic-brown);
 }
 
 /* Socials */
@@ -422,6 +505,10 @@ img {
   background-color: var(--active-blue);
 }
 
+.social-button:active path {
+  opacity: 0.3;
+}
+
 /* Copyright */
 
 .footer-copyright {
@@ -431,6 +518,19 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer-copyright-link {
+  display: block;
+  margin-top: 3px;
+}
+
+.footer-copyright-link:hover path {
+  fill: var(--basic-blue);
+}
+
+.footer-copyright-link:active path {
+  fill: var(--academy-logo-gray);
 }
 
  /* Hotels page */
