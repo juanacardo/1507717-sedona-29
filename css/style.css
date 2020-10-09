@@ -75,6 +75,7 @@ img {
   max-width: 1200px;
   min-width: 1200px;
   margin: 0 auto;
+  position: relative;
 
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -329,6 +330,7 @@ img {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 /* Hotel search */
@@ -383,61 +385,38 @@ img {
   transform: translate(-50%);
   box-shadow: 0px 7px 15px var(--shadow);
   box-sizing: border-box;
-  padding: 53px 55px 55px;
+  width: 570px;
+  padding: 54px 55px 55px;
 }
 
-.modal-element-in,
-.modal-element-out {
+.modal-element-in {
   position: relative;
   margin: 0 auto 29px;
+}
+
+.modal-element-out {
+  position: relative;
+  margin: 0 auto 30px;
 }
 
 .modal-element-adults {
   margin: 0;
   margin-right: 48px;
   display: inline-block;
-}
-
-.input-adults,
-.input-children {
-  text-align: center;
-  width: 114px;
-  height: 38px;
   position: relative;
-}
-
-.input-adults::before,
-.input-children::before {
-  content: "";
-  background-image: url("../img/minus.svg");
-  position: absolute;
-  width: 12px;
-  height: 3px;
-  top: 18px;
-  left: 13px;
-}
-
-.input-adults::after,
-.input-children::after {
-  content: "";
-  background-image: url("../img/plus.svg");
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  top: 18px;
-  right: 14px;
 }
 
 .modal-element-children {
   margin: 0;
   display: inline-block;
+  position: relative;
 }
 
 .modal-input {
   font: inherit;
   border: none;
   background-color: var(--background-gray);
-  box-sizing:border-box;
+  box-sizing: border-box;
   padding: 6px 12px;
 }
 
@@ -455,10 +434,18 @@ img {
 .modal-input:active {
   background-color: transparent;
   border: 2px solid var(--light-gray);
+  outline: none;
 }
 
-.modal-element-in input,
-.modal-element-out input {
+.input-adults,
+.input-children {
+  text-align: center;
+  width: 114px;
+  height: 38px;
+}
+
+.input-in,
+.input-out {
   width: 346px;
   height: 38px;
 }
@@ -469,12 +456,48 @@ img {
   right: 9px;
 }
 
+.calendar:hover path {
+  fill: var(--basic-black);
+}
+
+.calendar:active path {
+  fill: var(--basic-blue);
+}
+
+.minus {
+  position: absolute;
+  top: 18px;
+  right: 89px;
+}
+
+.minus:hover rect {
+  fill: var(--basic-black);
+}
+
+.minus:active rect {
+  fill: var(--basic-blue);
+}
+
+.plus {
+  position: absolute;
+  top: 15px;
+  right: 13px;
+}
+
+.plus:hover path {
+  fill: var(--basic-black);
+}
+
+.plus:active path {
+  fill: var(--basic-blue);
+}
+
 .modal-element-in label {
   margin-right: 21px;
 }
 
 .modal-element-out label {
-  margin-right: 16px;
+  margin-right: 17px;
 }
 
 .modal-element-adults label {
@@ -521,6 +544,7 @@ img {
 
 .main-footer {
   background-color: var(--footer-background-white);
+  z-index: 1;
 }
 
 .main-footer-wrapper {
