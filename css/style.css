@@ -399,17 +399,24 @@ img {
   margin: 0 auto 30px;
 }
 
+.modal-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .modal-element-adults {
+  width: 226px;
   margin: 0;
-  margin-right: 48px;
-  display: inline-block;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .modal-element-children {
+  width: 179px;
   margin: 0;
-  display: inline-block;
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .modal-input {
@@ -418,11 +425,10 @@ img {
   background-color: var(--background-gray);
   box-sizing: border-box;
   padding: 6px 12px;
+  text-transform: uppercase;
 }
 
 .modal-input::placeholder {
-  font: inherit;
-  text-transform: uppercase;
   color: inherit;
 }
 
@@ -439,9 +445,9 @@ img {
 
 .input-adults,
 .input-children {
-  text-align: center;
-  width: 114px;
+  width: 38px;
   height: 38px;
+  text-align: center;
 }
 
 .input-in,
@@ -451,9 +457,12 @@ img {
 }
 
 .calendar {
+  background-color: transparent;
+  border: none;
+  outline: none;
   position: absolute;
-  top: 8px;
-  right: 9px;
+  top: 7px;
+  right: 4px;
 }
 
 .calendar:hover path {
@@ -464,10 +473,18 @@ img {
   fill: var(--basic-blue);
 }
 
-.minus {
-  position: absolute;
-  top: 18px;
-  right: 89px;
+.minus,
+.plus {
+  background-color: var(--background-gray);
+  border: none;
+  outline: none;
+  width: 38px;
+  height: 38px;
+}
+
+.minus svg,
+.plus svg {
+  vertical-align: middle;
 }
 
 .minus:hover rect {
@@ -476,12 +493,6 @@ img {
 
 .minus:active rect {
   fill: var(--basic-blue);
-}
-
-.plus {
-  position: absolute;
-  top: 15px;
-  right: 13px;
 }
 
 .plus:hover path {
@@ -501,11 +512,11 @@ img {
 }
 
 .modal-element-adults label {
-  margin-right: 38px;
+  margin-right: 42px;
 }
 
 .modal-element-children label {
-  margin-right: 24px;
+  margin-right: 27px;
 }
 
 .modal-button {
