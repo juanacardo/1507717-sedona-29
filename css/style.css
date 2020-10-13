@@ -336,8 +336,7 @@ img {
 /* Hotel filter */
 
 .hotel-search-form {
-  height: 217px;
-  padding: 25px 72px 31px;
+  padding: 25px 72px 8px 72px;
   box-sizing: border-box;
   background-image: url("../img/background-hotels.jpg");
   background-repeat: no-repeat;
