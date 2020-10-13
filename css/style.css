@@ -426,9 +426,18 @@ img {
   padding: 4px;
   display: flex;
   justify-content: space-between;
-  background-image: url("../img/break.svg");
-  background-repeat: no-repeat;
-  background-position: 50.5% 50%;
+  position: relative;
+}
+
+.price-controls::before {
+  content: "";
+  width: 2px;
+  height: 22px;
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .price-input {
