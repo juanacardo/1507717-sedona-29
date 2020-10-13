@@ -153,7 +153,7 @@ img {
 }
 
 .site-navigation a:not([href]) {
-  color: var(--basic-blue);
+  color: var(--basic-brown);
 }
 
 /* First screen*/
