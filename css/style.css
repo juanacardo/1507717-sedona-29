@@ -347,6 +347,7 @@ img {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-checkbox,
@@ -925,6 +926,7 @@ img {
 }
 
 .hotel-image {
+  min-width: 135px;
   margin-right: 30px;
   margin-top: 6px;
 }
@@ -998,6 +1000,7 @@ img {
 }
 
 .hotel-rating {
+  min-width: 111px;
   margin-left: auto;
 }
 
