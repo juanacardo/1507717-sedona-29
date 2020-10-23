@@ -332,7 +332,6 @@ img {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  outline: none;
 }
 
 /* Hotel filter */
@@ -407,6 +406,10 @@ img {
 
 .input-checkbox:checked:disabled + label::before {
   background-image: url('data:image/svg+xml,%3Csvg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z" fill="%236A6A6A"/%3E%3Cpath d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="%236A6A6A"/%3E%3C/svg%3E%0A');
+}
+
+.input-checkbox:focus + label::before {
+  box-shadow: -11px 7px 20px -3px var(--basic-black);
 }
 
 .filter-range {
@@ -548,7 +551,7 @@ img {
   background-color: var(--hover-brown);
 }
 
-.hotel-search-button:focus {
+.hotel-search-button:active {
   color: var(--opacity-white);
   background-color: var(--active-brown);
 }
@@ -640,7 +643,6 @@ img {
 .calendar {
   background-color: transparent;
   border: none;
-  outline: none;
   position: absolute;
   top: 7px;
   right: 4px;
@@ -658,7 +660,6 @@ img {
 .plus {
   background-color: var(--background-gray);
   border: none;
-  outline: none;
   width: 38px;
   height: 38px;
 }
@@ -714,7 +715,7 @@ img {
   background-color: var(--hover-blue);
 }
 
-.modal-button:focus {
+.modal-button:active {
   background-color: var(--active-blue);
   color: var(--opacity-white);
 }
