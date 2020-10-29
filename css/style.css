@@ -391,6 +391,8 @@ img {
   top: 0;
   width: 26px;
   height: 23px;
+  border: 2px solid transparent;
+  border-radius: 2px;
   background-image: url('data:image/svg+xml,%3Csvg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="white"/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -409,7 +411,7 @@ img {
 }
 
 .input-checkbox:focus + label::before {
-  box-shadow: -11px 7px 20px -3px var(--basic-black);
+  box-shadow: 0px 0px 0px 2px var(--basic-black);
 }
 
 .filter-range {
@@ -565,12 +567,20 @@ img {
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
-  transform: translate(-50%);
   box-shadow: 0px 7px 15px var(--shadow);
   box-sizing: border-box;
   width: 570px;
   padding: 55px 55px 55px;
+}
+
+/*.modal-show {
+  transform: translateY(0);
+}*/
+
+.modal-close {
+  transform: translateY(-100%);
 }
 
 .modal-element-in {
