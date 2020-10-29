@@ -11,7 +11,7 @@ hotelSearchButton.addEventListener('click', function () {
   });
 
 modalForm.addEventListener('submit', function (evt) {
-  if (!adults.value || !children.value) {
+  if (!adults.value) {
    evt.preventDefault();
   } else {
       localStorage.setItem('adults', adults.value);
