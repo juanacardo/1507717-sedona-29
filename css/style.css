@@ -558,6 +558,36 @@ img {
   background-color: var(--active-brown);
 }
 
+/* Animation */
+
+@keyframes movedown {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /* Modal of main page */
 
 .modal {
@@ -567,7 +597,7 @@ img {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -120%);
   z-index: 3;
   box-shadow: 0px 7px 15px var(--shadow);
   box-sizing: border-box;
@@ -575,12 +605,15 @@ img {
   padding: 55px 55px 55px;
 }
 
-/*.modal-show {
-  transform: translateY(0);
-}*/
+.modal-show {
+  animation-name: movedown;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
-.modal-close {
-  transform: translateY(-100%);
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .modal-element-in {
