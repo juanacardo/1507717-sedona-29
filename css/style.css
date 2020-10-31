@@ -569,7 +569,7 @@ img {
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(-50%);
   }
 
   10%,
@@ -577,14 +577,14 @@ img {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-51%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(-49%);
   }
 }
 
@@ -606,6 +606,10 @@ img {
 }
 
 .modal-show {
+  transform: translate(-50%);
+}
+
+.modal-down {
   animation-name: movedown;
   animation-duration: 1s;
   animation-fill-mode: forwards;
