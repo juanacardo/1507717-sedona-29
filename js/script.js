@@ -14,13 +14,13 @@ let childrenStorage = '';
 modal.classList.remove('modal-show');
 
 try {
-  adultsStorage = localStorage.getItem("adults");
+  adultsStorage = localStorage.getItem('adults');
 } catch (err) {
   isStorageSupport = false;
 }
 
 try {
-  childrenStorage = localStorage.getItem("children");
+  childrenStorage = localStorage.getItem('children');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -48,7 +48,7 @@ if (!adults.value || !dateIn.value || !dateOut.value) {
     evt.preventDefault();
     modal.classList.remove('modal-error');
     modal.offsetWidth = modal.offsetWidth;
-    modal.classList.add("modal-error");
+    modal.classList.add('modal-error');
   }
 });
 
