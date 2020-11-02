@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 /* Variables */
 
 :root {
@@ -298,7 +291,7 @@ img {
 }
 
 .features-item {
-  padding: 47px 49px 53px 50px;
+  padding: 46px 49px 54px 50px;
 }
 
 .left-card {
@@ -330,7 +323,7 @@ img {
 
 .recomendation-item {
   background-color: var(--basic-white);
-  padding: 158px 52px 81px;
+  padding: 158px 52px 83px;
   position: relative;
 }
 
@@ -393,7 +386,7 @@ img {
 /* Hotel filter */
 
 .hotel-search-form {
-  padding: 25px 72px 8px 68px;
+  padding: 25px 72px 8px 67px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: var(--basic-blue);
@@ -420,7 +413,7 @@ img {
 }
 
 .filter-checkbox {
-  margin-right: 54px;
+  margin-right: 55px;
 }
 
 .checkbox-legend,
@@ -431,7 +424,7 @@ img {
 .checkbox-legend {
   font-size: 16px;
   margin-bottom: 24px;
-  padding-left: 3px;
+  padding-left: 4px;
 }
 
 .filter-option {
@@ -1099,6 +1092,8 @@ img {
           align-items: center;
   border-bottom: 1px solid var(--light-gray);
   padding: 0 72px;
+  -webkit-box-sizing: border-box;
+      box-sizing: border-box;
  }
 
 .result {
@@ -1107,13 +1102,14 @@ img {
   line-height: 26px;
   margin: 0;
   margin-right: 48px;
+  padding-bottom: 1px;
 }
 
 .sort {
   font-size: 12px;
-  line-height: 19px;
+  line-height: 16px;
   margin: 0;
-  padding-bottom: 7px;
+  padding-bottom: 3px;
 }
 
 .sort a {
@@ -1176,13 +1172,17 @@ img {
 /* Hotel search list */
 
 .hotel-search-item {
-  padding: 24px 72px 30px;
+  padding: 24px 71px 30px 73px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid var(--light-gray);
+}
+
+.hotel-search-item:last-child {
+  padding-bottom: 31px;
 }
 
 .hotel-image {
@@ -1223,7 +1223,7 @@ img {
   display: inline-block;
   vertical-align: middle;
   min-width: 110px;
-  margin-right: 3px;
+  margin-right: 2px;
 }
 
 .buttons-wrapper {
@@ -1232,8 +1232,8 @@ img {
 
 .button-more {
   background-color: var(--basic-blue);
-  padding: 4px 16px;
-  margin-right: 3px;
+  padding: 4px 16px 4px 17px;
+  margin-right: 2px;
 }
 
 .button-more:hover {
@@ -1247,7 +1247,7 @@ img {
 
 .button-booking {
   background-color: var(--basic-brown);
-  padding: 4px 16px;
+  padding: 4px 18px 4px 15px;
 }
 
 .button-booking:hover {
