@@ -35,7 +35,6 @@
 /* Global */
 
 .page-body {
-  min-width: 1280px;
   min-height: 100%;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
@@ -138,19 +137,21 @@ img {
           box-sizing: border-box;
 }
 
-.align-left {
+.site-navigation li:nth-of-type(4n+1),
+.site-navigation li:nth-of-type(4n+2) {
   text-align: left;
 }
 
-.align-left:nth-of-type(1) {
-  padding-left: 72px;
-}
-
-.align-right {
+.site-navigation li:nth-of-type(4n),
+.site-navigation li:nth-of-type(4n+3) {
   text-align: right;
 }
 
-.align-right:nth-of-type(4) {
+.site-navigation li:nth-of-type(4n+1) {
+  padding-left: 72px;
+}
+
+.site-navigation li:nth-of-type(4n) {
   padding-right: 72px;
 }
 
@@ -787,7 +788,7 @@ img {
   background-color: var(--background-gray);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 6px 11px;
+  padding: 6px 32px 6px 11px;
   text-transform: uppercase;
 }
 
@@ -797,6 +798,7 @@ img {
 
 .modal-input::-moz-placeholder {
   color: inherit;
+  opacity: 1;
 }
 
 .modal-input:-ms-input-placeholder {
@@ -1130,7 +1132,7 @@ img {
 }
 .sort a:active {
   color: var(--basic-black);
-  border: none;
+  border-bottom: 1px dashed transparent;
 }
 
 .sort a:not([href]) {
@@ -1172,7 +1174,7 @@ img {
 /* Hotel search list */
 
 .hotel-search-item {
-  padding: 24px 71px 30px 73px;
+  padding: 24px 72px 30px 73px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1226,6 +1228,10 @@ img {
   margin-right: 2px;
 }
 
+.hotel-price {
+  vertical-align: middle;
+}
+
 .buttons-wrapper {
   margin: 0;
 }
@@ -1262,6 +1268,29 @@ img {
 .hotel-rating {
   min-width: 111px;
   margin-left: auto;
+  position: relative;
+}
+
+.hotel-rating::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 0;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+}
+
+.four-stars::before {
+  width: 89px;
+}
+
+.three-stars::before {
+  width: 65px;
+}
+
+.two-stars::before {
+  width: 41px;
 }
 
 .rating {
@@ -1269,8 +1298,8 @@ img {
   background-color: var(--background-gray);
   line-height: 27px;
   text-align: center;
-  padding: 0 14px;
-  margin: 0;
+  padding: 0 13px 0 16px;
+  margin: 69px 0 0;
 }
 
 .rating-stars {
@@ -1278,16 +1307,4 @@ img {
   margin: 7px 0 45px auto;
   background-image: url("../img/star.svg");
   background-repeat: space;
-}
-
-.four-stars {
-  width: 89px;
-}
-
-.three-stars {
-  width: 65px;
-}
-
-.two-stars {
-  width: 41px;
 }
