@@ -788,7 +788,6 @@ img {
   background-color: var(--background-gray);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 6px 32px 6px 11px;
   text-transform: uppercase;
 }
 
@@ -835,6 +834,7 @@ img {
 .input-out {
   width: 346px;
   height: 38px;
+  padding: 6px 32px 6px 11px;
 }
 
 .calendar {
